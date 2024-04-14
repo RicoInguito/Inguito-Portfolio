@@ -1,4 +1,5 @@
-@extends('educations.layout')
+@extends('Educations.layout')
+@extends('home')
 @section('content')
     <div class="container">
         <div class="row">
@@ -6,10 +7,10 @@
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Education</h2>
+                        <h2>Educations</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{ route('educations.create') }}" class="btn btn-success btn-sm" title="Add New Education">
+                        <a href="{{ route('educations.create')}}" class="btn btn-success btn-sm" title="Add New About___">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
                         <br/>
@@ -19,33 +20,36 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Grade Level</th>
-                                        <th>Year</th>
                                         <th>School</th>
+                                        <th>School Address</th>
+                                        <th>School Year</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($educations as $item)
+                                @foreach($educations as $sk)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->grade_level }}</td>
-                                        <td>{{ $item->year }}</td>
-                                        <td>{{ $item->school }}</td>
-
+                                        <td>{{ $sk->school }}</td>
+                                        <td>{{ $sk->school_address }}</td>
+                                        <td>{{$sk->school_year}}</td>
+ 
                                         <td>
-                                            <a href="{{ url('/education/' . $item->id) }}" title="View Education"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/education/' . $item->id . '/edit') }}" title="Edit Education"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                                            <form method="POST" action="{{ url('/education' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <a href="{{ route('educations.show', $sk->id) }}" title="View About"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a href="{{ route('educations.edit', $sk->id) }}" title="Edit About"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+ 
+                                            <form method="POST" action="{{route('educations.destroy', $sk->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Education" onclick="return confirm"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete About" onclick="return confirm"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                             </form>
+                                            
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <button type="back" class="btn btn-dark btn-sm" onclick="history.back()">Go Back</button>
+                            <!-- <a type="back" class="btn btn-dark btn-sm" href="{{route('about.index')}}">Go Back</a> -->
                         </div>
  
                     </div>

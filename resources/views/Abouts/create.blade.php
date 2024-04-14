@@ -1,6 +1,6 @@
 @extends('Abouts.layout')
 @section('content')
- 
+ @extends('home')
 <div class="card">
   <div class="card-header"><h2>About Page</h2></div>
   <div class="card-body">

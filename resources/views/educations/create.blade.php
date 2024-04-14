@@ -1,19 +1,19 @@
-@extends('educations.layout')
+@extends('Abouts.layout')
 @section('content')
- 
+ @extends('home')
 <div class="card">
-  <div class="card-header">Educations Page</div>
+  <div class="card-header"><h2>Educations Page</h2></div>
   <div class="card-body">
       
-      <form action="{{ url('education') }}" method="post">
+      <form action="{{ route('skills.store') }}" method="post">
         {!! csrf_field() !!}
-        <label>Grade Level</label>
-        <input type="text" name="grade_level" id="grade_level" class="form-control"><br>
-        <label>Year</label>
-        <input type="number" name="year" id="year" class="form-control"></br>
-        <label>School</label>
-        <input type="text" name="school" id="school" class="form-control"><br>
-        <input type="submit" value="Save" class="btn btn-success"></br>
+        <label>School</label></br>
+        <input type="text" name="school" id="name" class="form-control"></br>
+        <label>School Address</label></br>
+        <input type="text" name="school_address" id="email" class="form-control"></br>
+        <label>School Year</label></br>
+        <input type="number" name="school_year" id="email" class="form-control"></br>
+        <button type="submit" class="btn btn-success">Submit</br>
     </form>
    
   </div>

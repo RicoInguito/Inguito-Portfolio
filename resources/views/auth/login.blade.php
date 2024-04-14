@@ -14,19 +14,22 @@
 <div class="wrapper">
       <div class="title-text">
         <div class="title login">Login Form</div>
-        <div class="title register">Register Form</div>
+        <div class="title signup">Signup Form</div>
       </div>
       <div class="form-container">
         <div class="slide-controls">
           <input type="radio" name="slide" id="login" checked>
-          <input type="radio" name="slide" id="register">
+          <input type="radio" name="slide" id="signup">
           <label for="login" class="slide login">Login</label>
-          <label for="register" class="slide register">Register</label>
+          <label for="signup" class="slide signup">Signup</label>
           <div class="slider-tab"></div>
         </div>  
         <div class="form-inner">
-          <form action="{{route('login')}}" class="login" method="POST">
+          <form action="{{route('login')}}" method="POST">
           @csrf
+          @error('email')
+         <p style="color: red;"> {{$message}}</p>
+          @enderror
             <div class="field">
               <input type="text" placeholder="Email Address" name="email" required>
             </div>
@@ -34,15 +37,13 @@
               <input type="password" name="password" placeholder="Password" required>
             </div>
             <div class="pass-link"><a href="#">Forgot password?</a></div>
-            <div class="field btn">
+           
               <div class="btn-layer"></div>
-              <input type="submit" value="Login" >
-            </div>
+              <button class="field btn" type="submit" >Login</button>
 
-            
-            <div class="register-link">Not a member? <a href="#">Register now</a></div>
+            <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
           </form>
-          <form action="{{route('register')}}" class="Register">
+          <!-- <form action="#" class="signup">
             <div class="field">
               <input type="text" placeholder="Email Address" required>
             </div>
@@ -54,9 +55,9 @@
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
-              <input type="submit" value="Register">
+              <input type="submit" value="Signup">
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>

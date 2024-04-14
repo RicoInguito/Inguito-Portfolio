@@ -1,15 +1,15 @@
-@extends('educations.layout')
+@extends('Abouts.layout')
 @section('content')
  
- 
 <div class="card">
-  <div class="card-header"><b><h3>Educations Page</h3></b></div>
+  <div class="card-header"><h2>Educations Page</h2></div>
   <div class="card-body">
+   
+ 
         <div class="card-body">
-        <p class="card-text"><b>Grade Level</b> : {{ $educations->grade_level }}</p>
-        <p class="card-text"><b>Year</b> : {{ $educations->year }}</p>
-        <p class="card-text"><b>School</b> : {{ $educations->school }}</p>
-
+        <h5 class="card-title">School : {{ $educations->school }}</h5>
+        <p class="card-text">School Address : {{ $educations->school_addres }}</p>
+        <p class="card-text">School Year : {{ $educations->school_year }}</p>
   </div>
        
     </hr>

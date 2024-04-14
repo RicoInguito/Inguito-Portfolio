@@ -44,8 +44,8 @@
                 <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#education" class="nav-item nav-link">Education</a>
                 <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#service" class="nav-item nav-link">Service</a>    
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="#service" class="nav-item nav-link">Webinar</a>    
+                <a href="#portfolio" class="nav-item nav-link">Blog</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
                 <a href="{{route('login')}}" class="nav-item nav-link">Login</a>
                 <a href="{{route('register')}}" class="nav-item nav-link">Register</a>
@@ -147,17 +147,17 @@
     <div class="container-fluid pt-5" id="service">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Webinar</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Webinar</h1>
             </div>
             <div class="row pb-3">
-            @foreach ($service as $Services)
+                 @foreach ($service as $Services)
                         <div class="col-sm-6 py-2"><h6>Web Design: <span class="text-secondary">{{$Services->web_design}}</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Web Development: <span class="text-secondary">{{$Services->web_development}}</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Graphic Design: <span class="text-secondary">{{$Services->graphic_design}}</span></h6></div>
-                        @endforeach
+                 @endforeach
             </div>
-        </div>
+        </div>w
     </div>
     <!-- Services -->
 
@@ -166,8 +166,8 @@
     <div class="container-fluid pt-5 pb-3" id="portfolio">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Blog</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Blog</h1>
             </div>
             <div class="row">
                 <div class="col-12 text-center mb-2">
@@ -298,7 +298,7 @@
                 <a class="btn btn-light btn-social mr-2" href="https://twitter.com/InguitoRico"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/profile.php?id=100089117686099"><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/rico-inguito-344b8a233"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/inguitorico"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="d-flex justify-content-center mb-3">
                 <a class="text-white" href="#">Privacy</a>
