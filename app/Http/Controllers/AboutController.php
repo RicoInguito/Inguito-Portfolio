@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Models\About;
+
 use Illuminate\View\View;
 
 class AboutController extends Controller
