@@ -90,12 +90,12 @@
                     <h3 class="mb-4">UI/UX Designer & Web Developer</h3>
                     <p><b>UI </b>Human-first approach to Designing the Aesthetic experience of a approach<br><b>UX</b> Human-first approach tp product design.</p>
                     <div class="row mb-3">
-                        @foreach ($about as $abouts)
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">{{$abouts->name}}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">{{$abouts->birthday}}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">{{$abouts->email}}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">{{$abouts->address}}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">{{$abouts->freelance}}</span></h6></div>
+                        @foreach ($about as $Abouts)
+                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">{{$Abouts->name}}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">{{$Abouts->birthday}}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">{{$Abouts->email}}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">{{$Abouts->address}}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">{{$Abouts->freelance}}</span></h6></div>
                         @endforeach
                     </div>
                 </div>
