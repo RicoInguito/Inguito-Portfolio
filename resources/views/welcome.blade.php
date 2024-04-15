@@ -151,11 +151,7 @@
                 <h1 class="position-absolute text-uppercase text-primary">My Webinar</h1>
             </div>
             <div class="row pb-3">
-                 @foreach ($service as $Services)
-                        <div class="col-sm-6 py-2"><h6>Web Design: <span class="text-secondary">{{$Services->web_design}}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Web Development: <span class="text-secondary">{{$Services->web_development}}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Graphic Design: <span class="text-secondary">{{$Services->graphic_design}}</span></h6></div>
-                 @endforeach
+        
             </div>
         </div>w
     </div>
