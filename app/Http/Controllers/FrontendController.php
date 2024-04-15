@@ -13,9 +13,8 @@ class FrontendController extends Controller
     {
         $about = DB::table("about")->get();
         $education = DB::table("education")->get();
-        $service = DB::table("service")->get();
 
-        return view('welcome', compact('about', 'education', 'service'));
+        return view('welcome', compact('about', 'education'));
     }
 
     public function create()

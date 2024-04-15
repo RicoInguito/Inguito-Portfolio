@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">UI/UX Designer & Web Developer</h3>
-                    <p><b>UI</b>Human-first approach to Designing the Aesthetic experience of a approach<br>eerere</p>
+                    <p><b>UI </b>Human-first approach to Designing the Aesthetic experience of a approach<br><b>UX</b> Human-first approach tp product design.</p>
                     <div class="row mb-3">
                         @foreach ($about as $abouts)
                         <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">{{$abouts->name}}</span></h6></div>
